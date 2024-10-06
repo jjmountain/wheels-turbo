@@ -7,7 +7,7 @@ export default eventHandler(async (event) => {
   console.log("Incoming request headers:", event.headers);
   console.log("Incoming request cookies:", event.headers.get('cookie'));
 
-    Auth(toWebRequest(event), {
+    return Auth(toWebRequest(event), {
       basePath: "/r",
       secret: process.env.AUTH_SECRET,
       trustHost: !!process.env.VERCEL,

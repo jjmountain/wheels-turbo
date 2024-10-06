@@ -7,6 +7,7 @@ import { ThemeProvider, ThemeToggle } from "@acme/ui/theme";
 import { Toaster } from "@acme/ui/toast";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import "~/app/globals.css";
 
@@ -57,6 +58,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           </div>
           <Toaster />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

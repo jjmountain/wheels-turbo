@@ -16,6 +16,16 @@ export async function AuthShowcase() {
         >
           Sign in with Discord
         </Button>
+        <Button
+          className="mx-4"
+          size="lg"
+          formAction={async () => {
+            "use server";
+            await signIn("google");
+          }}
+        >
+          Sign in with Google
+        </Button>
       </form>
     );
   }
